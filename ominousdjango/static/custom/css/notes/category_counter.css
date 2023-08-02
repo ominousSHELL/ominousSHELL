@@ -1,0 +1,30 @@
+.circle{
+    height: 3rem;
+    width: 3rem;
+    background-color: white;
+	margin-left: 1.5rem;
+	border-radius: 5rem;
+	padding-left: 1.3rem;
+	padding-right: 1.3rem;
+}
+
+
+/**Notes**/
+#pwn_count{
+	color: #000;
+}
+#web_count{
+	color: #000;
+}
+#forensic_count{
+	color: #000;
+}
+#crypto_count{
+	color: #000;
+}
+#cloud_count{
+	color: #000;
+}
+#misc_count{
+	color: #000;
+}

@@ -1,0 +1,474 @@
+2023-07-13 14:40:02 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 13215
+2023-07-13 14:40:02 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2023-07-13 14:40:02 0 [Note] InnoDB: Number of transaction pools: 1
+2023-07-13 14:40:02 0 [Note] InnoDB: Using generic crc32 instructions
+2023-07-13 14:40:02 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2023-07-13 14:40:02 0 [Note] InnoDB: Completed initialization of buffer pool
+2023-07-13 14:40:02 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2023-07-13 14:40:03 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=47126
+2023-07-13 14:40:03 0 [Note] InnoDB: Starting final batch to recover 199 pages from redo log.
+2023-07-13 14:40:03 0 [Note] InnoDB: 128 rollback segments are active.
+2023-07-13 14:40:03 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2023-07-13 14:40:03 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2023-07-13 14:40:03 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2023-07-13 14:40:03 0 [Note] InnoDB: log sequence number 622512; transaction id 759
+2023-07-13 14:40:03 0 [Note] InnoDB: Loading buffer pool(s) from /data/data/com.termux/files/usr/var/lib/mysql/ib_buffer_pool
+2023-07-13 14:40:03 0 [Note] Plugin 'FEEDBACK' is disabled.
+2023-07-13 14:40:03 0 [Note] InnoDB: Buffer pool(s) load completed at 230713 14:40:03
+2023-07-13 14:40:03 0 [Note] Server socket created on IP: '::'.
+2023-07-13 14:40:03 0 [Note] Server socket created on IP: '0.0.0.0'.
+2023-07-13 14:40:03 0 [Note] mysqld: ready for connections.
+Version: '10.11.4-MariaDB'  socket: '/data/data/com.termux/files/usr/var/run/mysqld.sock'  port: 3306  MariaDB Server
+2023-07-13 14:44:14 3 [Warning] Aborted connection 3 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-13 14:44:14 4 [Warning] Aborted connection 4 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-13 14:48:43 6 [Warning] Aborted connection 6 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-13 14:48:43 7 [Warning] Aborted connection 7 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-13 14:51:17 9 [Warning] Aborted connection 9 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-13 14:51:17 8 [Warning] Aborted connection 8 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+
+Status information:
+
+Current dir: /data/data/com.termux/files/usr/var/lib/mysql/
+Running threads: 0  Cached threads: 3  Stack size: 299008
+
+Key caches:
+default
+Buffer_size:     134217728
+Block_size:           1024
+Division_limit:        100
+Age_threshold:         300
+Partitions:              0
+blocks used:             0
+not flushed:             0
+w_requests:              0
+writes:                  0
+r_requests:              0
+reads:                   0
+
+
+handler status:
+read_key:           30
+read_next:           1
+read_rnd             0
+read_first:          3
+write:               0
+delete               0
+update:              0
+
+Table status:
+Opened tables:         36
+Open tables:           29
+Open files:            37
+Open streams:           4
+
+Alarm status:
+Active alarms:   0
+Max used alarms: 0
+Next alarm time: 0
+
+Memory status:
+Non-mmapped space allocated from system: 0
+Number of free chunks:                   0
+Number of fastbin blocks:                0
+Number of mmapped regions:               0
+Space in mmapped regions:                37896192
+Maximum total allocated space:           37896192
+Space available in freed fastbin blocks: 0
+Total allocated space:                   37183304
+Total free space:                        712888
+Top-most, releasable space:              0
+Estimated memory (with thread stack):    38793216
+Global memory allocated by server:       24422128
+Memory allocated by threads:             0
+
+
+
+Events status:
+LLA = Last Locked At  LUA = Last Unlocked At
+WOC = Waiting On Condition  DL = Data Locked
+
+Event scheduler status:
+State      : INITIALIZED
+Thread id  : 0
+LLA        : n/a:0
+LUA        : n/a:0
+WOC        : NO
+Workers    : 0
+Executed   : 0
+Data locked: NO
+
+Event queue status:
+Element count   : 0
+Data locked     : NO
+Attempting lock : NO
+LLA             : init_queue:141
+LUA             : init_queue:151
+WOC             : NO
+Next activation : never
+2023-07-15 17:57:44 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 22112
+2023-07-15 17:57:44 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2023-07-15 17:57:44 0 [Note] InnoDB: Number of transaction pools: 1
+2023-07-15 17:57:44 0 [Note] InnoDB: Using generic crc32 instructions
+2023-07-15 17:57:44 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2023-07-15 17:57:44 0 [Note] InnoDB: Completed initialization of buffer pool
+2023-07-15 17:57:44 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2023-07-15 17:57:44 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=47126
+2023-07-15 17:57:45 0 [Note] InnoDB: Starting final batch to recover 199 pages from redo log.
+2023-07-15 17:57:45 0 [Note] InnoDB: 128 rollback segments are active.
+2023-07-15 17:57:45 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2023-07-15 17:57:45 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2023-07-15 17:57:45 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2023-07-15 17:57:45 0 [Note] InnoDB: log sequence number 638228; transaction id 779
+2023-07-15 17:57:45 0 [Note] Plugin 'FEEDBACK' is disabled.
+2023-07-15 17:57:45 0 [Note] InnoDB: Loading buffer pool(s) from /data/data/com.termux/files/usr/var/lib/mysql/ib_buffer_pool
+2023-07-15 17:57:45 0 [Note] InnoDB: Buffer pool(s) load completed at 230715 17:57:45
+2023-07-15 17:57:45 0 [Note] Server socket created on IP: '::'.
+2023-07-15 17:57:45 0 [Note] Server socket created on IP: '0.0.0.0'.
+2023-07-15 17:57:45 0 [Note] mysqld: ready for connections.
+Version: '10.11.4-MariaDB'  socket: '/data/data/com.termux/files/usr/var/run/mysqld.sock'  port: 3306  MariaDB Server
+2023-07-15 18:11:39 4 [Warning] Aborted connection 4 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 18:11:39 3 [Warning] Aborted connection 3 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 18:44:22 5 [Warning] Aborted connection 5 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 18:44:22 6 [Warning] Aborted connection 6 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 18:48:34 8 [Warning] Aborted connection 8 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 18:48:34 7 [Warning] Aborted connection 7 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 19:02:05 10 [Warning] Aborted connection 10 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 19:02:05 9 [Warning] Aborted connection 9 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+
+Status information:
+
+Current dir: /data/data/com.termux/files/usr/var/lib/mysql/
+Running threads: 0  Cached threads: 2  Stack size: 299008
+
+Key caches:
+default
+Buffer_size:     134217728
+Block_size:           1024
+Division_limit:        100
+Age_threshold:         300
+Partitions:              0
+blocks used:             0
+not flushed:             0
+w_requests:              0
+writes:                  0
+r_requests:              0
+reads:                   0
+
+
+handler status:
+read_key:           32
+read_next:           1
+read_rnd             0
+read_first:          3
+write:               0
+delete               0
+update:              0
+
+Table status:
+Opened tables:         27
+Open tables:           20
+Open files:            37
+Open streams:           4
+
+Alarm status:
+Active alarms:   0
+Max used alarms: 0
+Next alarm time: 0
+
+Memory status:
+Non-mmapped space allocated from system: 0
+Number of free chunks:                   0
+Number of fastbin blocks:                0
+Number of mmapped regions:               0
+Space in mmapped regions:                37666816
+Maximum total allocated space:           37666816
+Space available in freed fastbin blocks: 0
+Total allocated space:                   36960744
+Total free space:                        706072
+Top-most, releasable space:              0
+Estimated memory (with thread stack):    38264832
+Global memory allocated by server:       24306200
+Memory allocated by threads:             0
+
+
+
+Events status:
+LLA = Last Locked At  LUA = Last Unlocked At
+WOC = Waiting On Condition  DL = Data Locked
+
+Event scheduler status:
+State      : INITIALIZED
+Thread id  : 0
+LLA        : n/a:0
+LUA        : n/a:0
+WOC        : NO
+Workers    : 0
+Executed   : 0
+Data locked: NO
+
+Event queue status:
+Element count   : 0
+Data locked     : NO
+Attempting lock : NO
+LLA             : init_queue:141
+LUA             : init_queue:151
+WOC             : NO
+Next activation : never
+2023-07-15 20:43:26 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 5760
+2023-07-15 20:43:26 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2023-07-15 20:43:26 0 [Note] InnoDB: Number of transaction pools: 1
+2023-07-15 20:43:26 0 [Note] InnoDB: Using generic crc32 instructions
+2023-07-15 20:43:26 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2023-07-15 20:43:26 0 [Note] InnoDB: Completed initialization of buffer pool
+2023-07-15 20:43:27 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2023-07-15 20:43:27 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=47126
+2023-07-15 20:43:27 0 [Note] InnoDB: Starting final batch to recover 199 pages from redo log.
+2023-07-15 20:43:27 0 [Note] InnoDB: 128 rollback segments are active.
+2023-07-15 20:43:27 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2023-07-15 20:43:27 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2023-07-15 20:43:27 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2023-07-15 20:43:27 0 [Note] InnoDB: log sequence number 638312; transaction id 779
+2023-07-15 20:43:27 0 [Note] Plugin 'FEEDBACK' is disabled.
+2023-07-15 20:43:27 0 [Note] InnoDB: Loading buffer pool(s) from /data/data/com.termux/files/usr/var/lib/mysql/ib_buffer_pool
+2023-07-15 20:43:27 0 [Note] InnoDB: Buffer pool(s) load completed at 230715 20:43:27
+2023-07-15 20:43:27 0 [Note] Server socket created on IP: '::'.
+2023-07-15 20:43:27 0 [Note] Server socket created on IP: '0.0.0.0'.
+2023-07-15 20:43:27 0 [Note] mysqld: ready for connections.
+Version: '10.11.4-MariaDB'  socket: '/data/data/com.termux/files/usr/var/run/mysqld.sock'  port: 3306  MariaDB Server
+2023-07-15 20:52:52 4 [Warning] Aborted connection 4 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 20:52:52 3 [Warning] Aborted connection 3 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 20:57:53 6 [Warning] Aborted connection 6 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 20:57:53 5 [Warning] Aborted connection 5 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:15:00 8 [Warning] Aborted connection 8 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:15:00 7 [Warning] Aborted connection 7 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:17:17 9 [Warning] Aborted connection 9 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:17:17 10 [Warning] Aborted connection 10 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:19:25 11 [Warning] Aborted connection 11 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:19:25 12 [Warning] Aborted connection 12 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:21:33 13 [Warning] Aborted connection 13 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:21:33 14 [Warning] Aborted connection 14 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:24:29 15 [Warning] Aborted connection 15 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:24:29 16 [Warning] Aborted connection 16 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:28:42 18 [Warning] Aborted connection 18 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:28:42 17 [Warning] Aborted connection 17 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:31:02 20 [Warning] Aborted connection 20 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:31:02 19 [Warning] Aborted connection 19 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:33:04 22 [Warning] Aborted connection 22 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 21:33:04 21 [Warning] Aborted connection 21 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 22:46:58 23 [Warning] Aborted connection 23 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 22:46:58 24 [Warning] Aborted connection 24 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 23:00:57 25 [Warning] Aborted connection 25 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-15 23:00:57 26 [Warning] Aborted connection 26 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+
+Status information:
+
+Current dir: /data/data/com.termux/files/usr/var/lib/mysql/
+Running threads: 0  Cached threads: 2  Stack size: 299008
+
+Key caches:
+default
+Buffer_size:     134217728
+Block_size:           1024
+Division_limit:        100
+Age_threshold:         300
+Partitions:              0
+blocks used:             0
+not flushed:             0
+w_requests:              0
+writes:                  0
+r_requests:              0
+reads:                   0
+
+
+handler status:
+read_key:           48
+read_next:           1
+read_rnd             0
+read_first:          3
+write:               0
+delete               0
+update:              0
+
+Table status:
+Opened tables:         27
+Open tables:           20
+Open files:            37
+Open streams:           4
+
+Alarm status:
+Active alarms:   0
+Max used alarms: 0
+Next alarm time: 0
+
+Memory status:
+Non-mmapped space allocated from system: 0
+Number of free chunks:                   0
+Number of fastbin blocks:                0
+Number of mmapped regions:               0
+Space in mmapped regions:                37728256
+Maximum total allocated space:           37728256
+Space available in freed fastbin blocks: 0
+Total allocated space:                   37017064
+Total free space:                        711192
+Top-most, releasable space:              0
+Estimated memory (with thread stack):    38326272
+Global memory allocated by server:       24359704
+Memory allocated by threads:             0
+
+
+
+Events status:
+LLA = Last Locked At  LUA = Last Unlocked At
+WOC = Waiting On Condition  DL = Data Locked
+
+Event scheduler status:
+State      : INITIALIZED
+Thread id  : 0
+LLA        : n/a:0
+LUA        : n/a:0
+WOC        : NO
+Workers    : 0
+Executed   : 0
+Data locked: NO
+
+Event queue status:
+Element count   : 0
+Data locked     : NO
+Attempting lock : NO
+LLA             : init_queue:141
+LUA             : init_queue:151
+WOC             : NO
+Next activation : never
+2023-07-16 22:19:10 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 6477
+2023-07-16 22:19:10 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2023-07-16 22:19:10 0 [Note] InnoDB: Number of transaction pools: 1
+2023-07-16 22:19:10 0 [Note] InnoDB: Using generic crc32 instructions
+2023-07-16 22:19:10 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2023-07-16 22:19:10 0 [Note] InnoDB: Completed initialization of buffer pool
+2023-07-16 22:19:10 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2023-07-16 22:19:10 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=47126
+2023-07-16 22:19:11 0 [Note] InnoDB: Starting final batch to recover 199 pages from redo log.
+2023-07-16 22:19:11 0 [Note] InnoDB: 128 rollback segments are active.
+2023-07-16 22:19:11 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2023-07-16 22:19:11 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2023-07-16 22:19:11 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2023-07-16 22:19:11 0 [Note] InnoDB: log sequence number 638396; transaction id 779
+2023-07-16 22:19:11 0 [Note] Plugin 'FEEDBACK' is disabled.
+2023-07-16 22:19:11 0 [Note] InnoDB: Loading buffer pool(s) from /data/data/com.termux/files/usr/var/lib/mysql/ib_buffer_pool
+2023-07-16 22:19:11 0 [Note] InnoDB: Buffer pool(s) load completed at 230716 22:19:11
+2023-07-16 22:19:11 0 [Note] Server socket created on IP: '::'.
+2023-07-16 22:19:11 0 [Note] Server socket created on IP: '0.0.0.0'.
+2023-07-16 22:19:11 0 [Note] mysqld: ready for connections.
+Version: '10.11.4-MariaDB'  socket: '/data/data/com.termux/files/usr/var/run/mysqld.sock'  port: 3306  MariaDB Server
+2023-07-16 22:23:16 4 [Warning] Aborted connection 4 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:23:16 3 [Warning] Aborted connection 3 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:24:53 17 [Warning] Aborted connection 17 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:24:53 18 [Warning] Aborted connection 18 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:25:17 15 [Warning] Aborted connection 15 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:25:17 16 [Warning] Aborted connection 16 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:25:35 19 [Warning] Aborted connection 19 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:25:35 20 [Warning] Aborted connection 20 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:25:43 22 [Warning] Aborted connection 22 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:25:43 21 [Warning] Aborted connection 21 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:26:09 23 [Warning] Aborted connection 23 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:26:09 24 [Warning] Aborted connection 24 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:29:39 25 [Warning] Aborted connection 25 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:29:39 26 [Warning] Aborted connection 26 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:32:25 29 [Warning] Aborted connection 29 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:32:25 28 [Warning] Aborted connection 28 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:47:37 30 [Warning] Aborted connection 30 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:47:37 31 [Warning] Aborted connection 31 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:47:48 32 [Warning] Aborted connection 32 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:47:48 33 [Warning] Aborted connection 33 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:56:01 34 [Warning] Aborted connection 34 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 22:56:01 35 [Warning] Aborted connection 35 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 23:01:09 40 [Warning] Aborted connection 40 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 23:01:09 41 [Warning] Aborted connection 41 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 23:07:30 42 [Warning] Aborted connection 42 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 23:07:30 43 [Warning] Aborted connection 43 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 23:14:20 44 [Warning] Aborted connection 44 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 23:14:20 45 [Warning] Aborted connection 45 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 23:34:55 46 [Warning] Aborted connection 46 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 23:34:55 47 [Warning] Aborted connection 47 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 23:36:05 48 [Warning] Aborted connection 48 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-07-16 23:36:06 49 [Warning] Aborted connection 49 to db: 'ominousdb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+
+Status information:
+
+Current dir: /data/data/com.termux/files/usr/var/lib/mysql/
+Running threads: 0  Cached threads: 3  Stack size: 299008
+
+Key caches:
+default
+Buffer_size:     134217728
+Block_size:           1024
+Division_limit:        100
+Age_threshold:         300
+Partitions:              0
+blocks used:             0
+not flushed:             0
+w_requests:              0
+writes:                  0
+r_requests:              0
+reads:                   0
+
+
+handler status:
+read_key:          143
+read_next:           3
+read_rnd             0
+read_first:          5
+write:               3
+delete               0
+update:              2
+
+Table status:
+Opened tables:         37
+Open tables:           30
+Open files:            37
+Open streams:           4
+
+Alarm status:
+Active alarms:   0
+Max used alarms: 0
+Next alarm time: 0
+
+Memory status:
+Non-mmapped space allocated from system: 0
+Number of free chunks:                   0
+Number of fastbin blocks:                0
+Number of mmapped regions:               0
+Space in mmapped regions:                38096896
+Maximum total allocated space:           38096896
+Space available in freed fastbin blocks: 0
+Total allocated space:                   37372416
+Total free space:                        724480
+Top-most, releasable space:              0
+Estimated memory (with thread stack):    38993920
+Global memory allocated by server:       24550400
+Memory allocated by threads:             0
+
+
+
+Events status:
+LLA = Last Locked At  LUA = Last Unlocked At
+WOC = Waiting On Condition  DL = Data Locked
+
+Event scheduler status:
+State      : INITIALIZED
+Thread id  : 0
+LLA        : n/a:0
+LUA        : n/a:0
+WOC        : NO
+Workers    : 0
+Executed   : 0
+Data locked: NO
+
+Event queue status:
+Element count   : 0
+Data locked     : NO
+Attempting lock : NO
+LLA             : init_queue:141
+LUA             : init_queue:151
+WOC             : NO
+Next activation : never

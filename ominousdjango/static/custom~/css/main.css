@@ -1,0 +1,63 @@
+#fake{
+	color:#000;
+}
+body{
+	color: turquoise !important;
+	font-size:1rem !important;
+}
+/**Header**/
+.nav-pills .nav-link.active {
+    background-color: lightseagreen !important;
+	color: gainsboro
+}
+.nav-pills .nav-link:hover {
+    color: #turquoise !important;
+}
+.nav-pills .nav-link{
+	color: turquoise;
+	border: 2px solid turquoise;
+	font-size:2rem;
+}
+#mainLayout{
+	height: 100%;
+	border: 2px solid turquoise;
+	border-radius: 1.3rem
+}
+
+#pageLayout{
+	margin:1.5rem;
+	padding:1.5rem;
+	border-radius: 1.3rem
+}
+/**Table**/
+#tbody {
+	border: 2px solid turquoise;
+	font-size:1.3rem;
+	height: auto
+}
+td{
+	color: turquoise !important;
+}
+#table{
+	color: turquoise;
+	margin-left: 15rem;
+	width: 75%;
+	position:relative;
+	top: -2rem;
+	right:0;
+}
+#results{
+	font-size:1.1rem;
+	color: turquoise	
+}
+/**Search bar**/
+#bar{
+	border: 2px solid turquoise;
+	color: turquoise;
+	border-radius:0.5rem;
+	font-size:1.8rem;
+	width: 100%;
+	height:4rem;
+
+}
+

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/custom/css/notes/misc.css">
+<link rel="stylesheet" href="/static/custom/css/notes/dropdown.css">
+<link rel="stylesheet" href="/static/custom/css/notes/category_counter.css">
+
+<script src="/static/custom/js/notes/notes.js"></script>
+<div class="container-fluid" id="mainLayout">
+	<!--1st row-->
+	<div id="notes-filter-layout">
+		<div class="row">
+			<!--Dropdown-->
+			<div class="col-3">
+			  <button class="button_category bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" >
+					Categories
+			  </button>
+				<div>
+					<div class="collapse collapse-horizontal" id="collapseWidthExample">
+						<div class="card card-body bg-dark" style="width: 200px">
+							<div class="d-flex align-items-start">
+								<div class="nav bg-dark dropdown flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+									<button onclick="request_notes(this);" class="nav-link category_item" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Pwn<span class="circle"><span id="pwn_count">0</span></span></button>
+									<button onclick="request_notes(this);" class="nav-link category_item" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Web<span class="circle"><span id="web_count">0</span></span></button>
+									<button onclick="request_notes(this);" class="nav-link category_item" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Forensic<span class="circle"><span id="forensic_count">0</span></span></button>
+									<button onclick="request_notes(this);" class="nav-link category_item" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Crypto<span class="circle"><span id="crypto_count">0</span></span></button>
+									<button onclick="request_notes(this);" class="nav-link category_item" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Cloud<span class="circle"><span id="cloud_count">0</span></span></button>
+									<button onclick="request_notes(this);" class="nav-link category_item" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Misc<span class="circle"</span><span id="misc_count">0</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Platform dropdown -->
+			<div class="col-3">
+				<button class="button_platform bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExamples" >
+					Platform
+				</button>
+				<div>
+				  <div class="collapse collapse-horizontal" id="collapseWidthExamples">
+					<div class="card card-body bg-dark" style="width: 250px">
+					  <div class="d-flex align-items-start">
+						<div class="nav bg-dark dropdown flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+							<button onclick="request_platform(this);" class="nav-link platform_item active" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Hackthebox</button>
+							<button onclick="request_platform(this);" class="nav-link platform_item" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Tryhackme</button>
+							<button onclick="request_platform(this);" class="nav-link platform_item" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Overthewire</button>
+						</div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!--Search Bar-->
+			<div class="col-6 p-4">
+				<input onkeyup="search_note(this);" placeholder="Search note..." id="bar" class="bg-dark p-3" type="text"/>
+			</div>
+			<!--Table-->
+			<div id="notes-table" class="col-8 p-4">
+				<table class="table table-dark table-bordered overflow-scroll">
+					<tbody id="tbody_notes">
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!--2nd row-->
+	<div class="row">
+		<!--pageLayout-->
+		<div id="notes-page-layout" class="col overflow-scroll">
+		</div>
+	</div>
+
+</div>
+{% endblock content %}

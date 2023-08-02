@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/custom/css/main.css">
+
+<div class="tab-content" id="pills-tabContent">
+	{% include 'blog.html' %}
+
+	{% include 'notes.html' %}
+</div>
+{% endblock content %}
+

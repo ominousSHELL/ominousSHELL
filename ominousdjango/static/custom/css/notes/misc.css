@@ -1,0 +1,52 @@
+#notes-page-layout{
+	margin:1.5rem;
+	padding:1.5rem;
+	border-radius: 1.3rem
+}
+
+#notes-filter-layout{
+	border: 2px solid white;
+	border-radius: 0.5rem;
+	margin: 1rem;
+	margin-top: 2rem;
+	padding:0.5rem;
+	height: 40rem
+}
+
+/**Table**/
+#tbody_notes {
+	border: 2px solid white;
+	font-size:1.3rem;
+}
+td{
+	color: white !important;
+}
+#notes-table{
+	color: white;
+	margin-left: 15rem;
+	margin-right: 2.15rem;
+	margin-top:3.8rem;
+	position:absolute;
+	top:15rem;
+	right:2rem;
+	height:30rem;
+	width: 45%;
+	border:2px solid white;
+	border-radius:0.5rem;
+	overflow:scroll;
+}
+#results{
+	font-size:1rem;
+	color: white;
+}
+/**Search bar**/
+#notes-bar{
+	border: 2px solid white;
+	color: white;
+	margin-left:1rem;
+	border-radius:0.5rem;
+	font-size:1.5rem;
+	width: 100%;
+	height:4rem;
+}
+

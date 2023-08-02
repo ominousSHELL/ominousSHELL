@@ -1,0 +1,9 @@
+main: https://hyperpolyglot.org/unix-shells
+startup files: http://linux.die.net/man/1/zsh
+zshoptions: http://linux.die.net/man/1/zshoptions
+built-ins: http://linux.die.net/man/1/zshbuiltins
+tab-completion: http://linux.die.net/man/1/zshcompwid, http://linux.die.net/man/1/zshcompsys
+expansions: http://linux.die.net/man/1/zshexpn
+misc: http://linux.die.net/man/1/zshmisc
+cmd-editor: http://linux.die.net/man/1/zshzle
+
