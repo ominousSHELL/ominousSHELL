@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--Mobile-->
+<div class="container text-center d-sm-block d-md-none d-lg-none d-xxl-none text-light">
+  <div class="row">
+    <div class="col py-1">
+		<h3 class='text-start' id="about">About</h3>
+	   <p class="text-start text-white-50">This website serves as a knowledge base that will continously be updated with information regarding new skills, techniques, tips and tricks I learn throughout my journey within the cybersecurity industry.
+	   It will retain notes from completing CTF challenges, as well as just blogs I may write in order to understand complex topics.
+	   </p>
+	   <h3 class='text-start' id="todo">Todo List</h3>
+	   <nav>
+		 <ul>
+		   <li class="text-white-50">Complete development of this site</li>
+		   <li class="text-white-50">Get started with HTB</li>
+		   <li class="text-white-50">Get started with Tryhackme</li>
+		   <li class="text-white-50">Learn hacking tools such as Zaproxy</li>
+		   <li class="text-white-50">Learn productivity software, such as VSCodium, Vim, Tmux, etc.</li>
+		 </ul>
+	   </nav>
+    </div>
+  </div>
+</div>
+
+
+<!--Desktop-->
+<div class="container text-center d-none d-md-block d-lg-block d-xl-block d-xxl-block text-light overflow-auto">
+  <div class="row">
+    <div class="col py-1">
+		<h3 class='text-start' id="about">About</h3>
+		<p class="text-start text-white-50">This website serves as a knowledge base that will continously be updated with information regarding new skills, techniques, tips and tricks I learn throughout my journey within the cybersecurity industry.
+		It will retain notes from completing CTF challenges, as well as just blogs I may write in order to understand complex topics.
+		</p>
+		<h3 class='text-start' id="todo">Todo List</h3>
+		<nav>
+		  <ul>
+			<li class="text-white-50">Complete development of this site</li>
+			<li class="text-white-50">Get started with HTB</li>
+			<li class="text-white-50">Get started with Tryhackme</li>
+			<li class="text-white-50">Learn hacking tools such as Zaproxy</li>
+			<li class="text-white-50">Learn productivity software, such as VSCodium, Vim, Tmux, etc.</li>
+		  </ul>
+		</nav>
+
+    </div>
+	<!--On this page-->
+	<div class="col-md-auto">
+	 <strong class="d-none d-md-block h6 mt-4" align="left">On this page</strong>
+	 <hr class="d-none d-md-block my-2 ms-6">
+	 <div>
+		<nav>
+		  <ul>
+			<li><a class="link-secondary link-underline-opacity-0" href="#about">About</a></li>
+			<li><a class="link-secondary link-underline-opacity-0" href="#todo">Todo List</a></li>
+		  </ul>
+		</nav>
+	  </div>
+	  <!--On this page-->
+	</div>
+  </div>
+</div>
+{% endblock content %}

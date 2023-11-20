@@ -1,0 +1,12 @@
+#fake{
+	color:#000;
+}
+body{
+	color: white !important;
+	font-size:1rem !important;
+}
+#mainLayout{
+	height: 100%;
+	border: 2px solid turquoise;
+	border-radius: 1.3rem
+}

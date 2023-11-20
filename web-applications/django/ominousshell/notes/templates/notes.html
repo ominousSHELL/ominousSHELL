@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--Includes-->
+<script src="/static/custom/js/notes/notes.js"></script>
+
+<!--Mobile-->
+<div class="container text-center d-sm-block d-md-none d-lg-none d-xxl-none text-light">
+  <div class="row">
+    <!--Search bar-->
+    <div class="col my-5">
+      <nav class="navbar bg-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light">Search for a note</a>
+          <form class="d-flex" role="search">
+            <input onkeyup="search_note(this);" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+      </nav>
+
+      <!--Results Table-->
+      <table class="table table-bordered table-dark mt-4">
+        <tbody id="tbody_notes_mobile">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<!--Desktop-->
+<div class="container text-center d-none d-md-block d-lg-block d-xl-block d-xxl-block text-light overflow-auto">
+
+  <!--Category options-->
+  <div class="row">
+    <div class="col-md-auto py-2">
+      <h4>Categories</h4>
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center ps-1 bg-secondary">
+          <a onclick='request_note(this);' class="link-light link-underline link-underline-opacity-0" href="#">Pwn</a>
+          <span id='pwn_count' class="badge bg-info rounded-pill ms-1">0</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center ps-1 bg-secondary">
+          <a onclick='request_note(this);' class="link-light link-underline link-underline-opacity-0" href="#">Hardware</a>
+          <span id="hardware_count" class="badge bg-info rounded-pill ms-1">0</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center ps-1 bg-secondary">
+          <a onclick='request_note(this);' class="link-light link-underline link-underline-opacity-0" href="#">Crypto</a>
+          <span id="crypto_count" class="badge bg-info rounded-pill ms-1">0</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center ps-1 bg-secondary">
+          <a onclick='request_note(this);' class="link-light link-underline link-underline-opacity-0" href="#">Reversing</a>
+          <span id="reversing_count" class="badge bg-info rounded-pill ms-1">0</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center ps-1 bg-secondary">
+          <a onclick='request_note(this);' class="link-light link-underline link-underline-opacity-0" href="#">GamePwn</a>
+          <span id="gamepwn_count" class="badge bg-info rounded-pill ms-1">0</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center ps-1 bg-secondary">
+          <a onclick='request_note(this);' class="link-light link-underline link-underline-opacity-0" href="#">Blockchain</a>
+          <span id="blockchain_count" class="badge bg-info rounded-pill ms-1">0</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center ps-1 bg-secondary">
+          <a onclick='request_note(this);' class="link-light link-underline link-underline-opacity-0" href="#">Forensics</a>
+          <span id="forensics_count" class="badge bg-info rounded-pill ms-1">0</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center ps-1 bg-secondary">
+          <a onclick='request_note(this);' class="link-light link-underline link-underline-opacity-0" href="#">Misc</a>
+          <span id="misc_count" class="badge bg-info rounded-pill ms-1">0</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center ps-1 bg-secondary">
+          <a onclick='request_note(this);' class="link-light link-underline link-underline-opacity-0" href="#">Mobile</a>
+          <span id="mobile_count" class="badge bg-info rounded-pill ms-1">0</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center ps-1 bg-secondary">
+          <a onclick='request_note(this);' class="link-light link-underline link-underline-opacity-0" href="#">Web</a>
+          <span id="web_count" class="badge bg-info rounded-pill ms-1">0</span>
+        </li>
+      </ul>
+    </div>
+
+    <!--Search bar-->
+    <div class="col my-5">
+      <nav class="navbar bg-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light">Search for a note</a>
+          <form class="d-flex" role="search">
+            <input onkeyup="search_note(this);" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+      </nav>
+
+      <!--Results Table-->
+      <table class="table table-bordered table-dark mt-4">
+        <tbody id="tbody_notes">
+        </tbody>
+      </table>
+    </div>
+
+    <!--Platform-->
+    <div class="col-md-auto py-2">
+      <h4>Platform</h4>
+      <ul class="list-group">
+        <li id='htb' class="list-group-item d-flex justify-content-between align-items-center ps-1 bg-secondary">
+          <a onclick='request_platform(this);' class="link-light link-underline link-underline-opacity-0" href="#">HTB</a>
+          <span id='htb_counter' class="badge bg-info rounded-pill ms-1">0</span>
+        </li>
+        <li id='thm' class="list-group-item d-flex justify-content-between align-items-center ps-1 bg-secondary">
+          <a onclick='request_platform(this);' class="link-light link-underline link-underline-opacity-0" href="#">THM</a>
+          <span id="thm_counter" class="badge bg-info rounded-pill ms-1">0</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+{% endblock content %}
