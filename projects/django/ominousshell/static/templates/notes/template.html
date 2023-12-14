@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--Mobile-->
+<div class="container text-center d-sm-block d-md-none d-lg-none d-xxl-none text-light">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-start">Title</h1>
+            
+            <hr class="d-none d-md-block mt-5 ms-6">
+            <h2 class="text-start mt-5" >Reconnaissance</h3>
+            <p class="text-start">Content for reconnaissance</p>
+            
+            <hr class="d-none d-md-block mt-5 ms-6">
+            <h2 class="text-start mt-5" >Scannning</h3>
+            <p class="text-start">Content for scanning</p>
+            <hr class="d-none d-md-block mt-5 ms-6">
+    
+            <h2 class="text-start mt-5" >Exploitation</h3>
+            <p class="text-start">Content for exploitation</p>
+            <hr class="d-none d-md-block mt-5 ms-6">
+    
+            <h2 class="text-start mt-5" >Persistence</h3>
+            <p class="text-start">Content for persistence</p>
+            <hr class="d-none d-md-block mt-5 ms-6">
+    
+            <h2 class="text-start mt-5" >Covering Tracks</h3>
+            <p class="text-start">Content for covering tracks</p>
+
+
+        </div>
+    </div>
+</div>
+
+<!--Desktop-->
+<div class="container text-center d-none d-md-block d-lg-block d-xl-block d-xxl-block text-light overflow-auto">
+    <div class="row">
+      <div class="col my-1">
+        <h1 class="text-start">Title</h1>
+
+        <hr class="d-none d-md-block mt-5 ms-6">
+        <h2 class="text-start mt-5" >Reconnaissance</h3>
+        <p class="text-start">Content for reconnaissance</p>
+        
+        <hr class="d-none d-md-block mt-5 ms-6">
+        <h2 class="text-start mt-5" >Scannning</h3>
+        <p class="text-start">Content for scanning</p>
+        <hr class="d-none d-md-block mt-5 ms-6">
+
+        <h2 class="text-start mt-5" >Exploitation</h3>
+        <p class="text-start">Content for exploitation
+        </p>
+        <pre>
+          <code class="language-python line-numbers">
+            print('This is a <mark>template</mark>')
+          </code>
+       </pre>
+
+        <hr class="d-none d-md-block mt-5 ms-6">
+
+        <h2 class="text-start mt-5" >Persistence</h3>
+        <p class="text-start">Content for persistence</p>
+        <hr class="d-none d-md-block mt-5 ms-6">
+
+        <h2 class="text-start mt-5" >Covering Tracks</h3>
+        <p class="text-start">Content for covering tracks</p>
+      </div>
+      <!--On this page-->
+	<div class="col-md-auto">
+        <strong class="d-none d-md-block h6 mt-4" align="left">On this page</strong>
+        <hr class="d-none d-md-block my-2 ms-6">
+        <div>
+           <nav>
+             <ul>
+               <li><a class="link-secondary link-underline-opacity-0" href="#">Reconnaissance</a>
+                  <ul>
+                    <li class="link-secondary link-underline-opacity-0"><a class="link-secondary link-underline-opacity-0" href="#">Content for reconnaissance #1</a></li>
+                    <li class="link-secondary link-underline-opacity-0"><a class="link-secondary link-underline-opacity-0" href="#">Content for reconnaissance #n</a></li>
+                  </ul>
+              </li>
+               <li><a class="link-secondary link-underline-opacity-0" href="#">Scanning</a>
+                   <ul>
+                    <li class="link-secondary link-underline-opacity-0"><a class="link-secondary link-underline-opacity-0" href="#">Content for scanning #1</a></li>
+                    <li class="link-secondary link-underline-opacity-0"><a class="link-secondary link-underline-opacity-0" href="#">Content for scanning #n</a></li>
+                  </ul>
+              </li>
+               <li><a class="link-secondary link-underline-opacity-0" href="#">Exploitation</a>
+                  <ul>
+                    <li class="link-secondary link-underline-opacity-0"><a class="link-secondary link-underline-opacity-0" href="#">Content for exploitation #1</a></li>
+                    <li class="link-secondary link-underline-opacity-0"><a class="link-secondary link-underline-opacity-0" href="#">Content for exploitation #n</a></li>
+                  </ul>
+              </li>
+               <li><a class="link-secondary link-underline-opacity-0" href="#">Persistence</a>
+                  <ul>
+                    <li class="link-secondary link-underline-opacity-0"><a class="link-secondary link-underline-opacity-0" href="#">Content for persistence #1</a></li>
+                    <li class="link-secondary link-underline-opacity-0"><a class="link-secondary link-underline-opacity-0" href="#">Content for persistence #n</a></li>
+                  </ul>
+              </li>
+               <li><a class="link-secondary link-underline-opacity-0" href="#">Covering Tracks</a>
+                  <ul>
+                    <li class="link-secondary link-underline-opacity-0"><a class="link-secondary link-underline-opacity-0" href="#">Content for covering tracks #1</a></li>
+                    <li class="link-secondary link-underline-opacity-0"><a class="link-secondary link-underline-opacity-0" href="#">Content for covering tracks #n</a></li>
+                  </ul>
+              </li>
+             </ul>
+           </nav>
+         </div>
+         <!--On this page-->
+    </div>
+</div>
+{% endblock content %}

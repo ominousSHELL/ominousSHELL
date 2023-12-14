@@ -1,0 +1,624 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--Mobile-->
+<div class="container text-center d-sm-block d-md-none d-lg-none d-xxl-none text-light">
+    <div class="row">
+        <div class="col">
+          <h1 class="text-start">Linux Fundamentals</h1>
+          <h3 class="text-start mt-5" >Introduction to Linux</h3>
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Command</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">man &lt;tool&gt;</td>
+                <td style="font-size: 0.8rem" class="text-white-50">Opens man pages for the specified tool.</td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">&lt;tool&gt; -h</td>
+                <td style="font-size: 0.8rem" class="text-white-50">Prints the help page of the tool. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">apropos &lt;keyword&gt;</td>
+                <td style="font-size: 0.8rem" class="text-white-50">Searches through man pages' descriptions for instances of a given keyword.</td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">cat</td>
+                <td style="font-size: 0.8rem" class="text-white-50">Concatenate and print files.</td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">whoami</td>
+                <td style="font-size: 0.8rem" class="text-white-50">Displays current username.</td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">id</td>
+                <td style="font-size: 0.8rem" class="text-white-50">Returns users identity.</td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">hostname</td>
+                <td style="font-size: 0.8rem" class="text-white-50">Sets or prints the name of the current host system.</td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">uname</td>
+                <td style="font-size: 0.8rem" class="text-white-50">Prints operating system name.</td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">pwd</td>
+                <td style="font-size: 0.8rem" class="text-white-50">Returns working directory name.</td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">ifconfig</td>
+                <td style="font-size: 0.8rem" class="text-white-50">The `ifconfig` utility is used to assign or view an address to a network interface and/or configure network interface parameters.</td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">ip</td>
+                <td style="font-size: 0.8rem" class="text-white-50">Ip is a utility to show or manipulate routing, network devices, interfaces, and tunnels.</td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  netstat  </td>                                                                                                                                                                
+                <td style="font-size: 0.8rem" class="text-white-50"> Shows network status. </td>   
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  ss  </td>                                                                                                                                                                     
+                <td style="font-size: 0.8rem" class="text-white-50"> Another utility to investigate sockets. </td>   
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  ps  </td>                                                                                                                                                                     
+                <td style="font-size: 0.8rem" class="text-white-50"> Shows process status. </td> 
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  who  </td>                                                                                                                                                                    
+                <td style="font-size: 0.8rem" class="text-white-50"> Displays who is logged in. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  env  </td>                                                                                                                                                                    
+                <td style="font-size: 0.8rem" class="text-white-50"> Prints environment or sets and executes a command. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  lsblk  </td>                                                                                                                                                                  
+                <td style="font-size: 0.8rem" class="text-white-50"> Lists block devices. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  lsusb  </td>                                                                                                                                                                  
+                <td style="font-size: 0.8rem" class="text-white-50"> Lists USB devices. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  lsof  </td>                                                                                                                                                                   
+                <td style="font-size: 0.8rem" class="text-white-50"> Lists opened files. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  lspci  </td>                                                                                                                                                                  
+                <td style="font-size: 0.8rem" class="text-white-50"> Lists PCI devices. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  sudo  </td>                                                                                                                                                                   
+                <td style="font-size: 0.8rem" class="text-white-50"> Execute command as a different user. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  su  </td>
+                <td style="font-size: 0.8rem" class="text-white-50">The `su` utility requests appropriate user credentials via PAM and switches to that user ID (the default user is the superuser).  A shell is then executed./td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  useradd  </td>                                                                                                                                                                
+                <td style="font-size: 0.8rem" class="text-white-50"> Creates a new user or update default new user information. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  userdel  </td>                                                                                                                                                                
+                <td style="font-size: 0.8rem" class="text-white-50"> Deletes a user account and related files. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  usermod  </td>                                                                                                                                                                
+                <td style="font-size: 0.8rem" class="text-white-50"> Modifies a user account. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  addgroup  </td>                                                                                                                                                               
+                <td style="font-size: 0.8rem" class="text-white-50"> Adds a group to the system. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  delgroup  </td>                                                                                                                                                               
+                <td style="font-size: 0.8rem" class="text-white-50"> Removes a group from the system. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  passwd  </td>                                                                                                                                                                 
+                <td style="font-size: 0.8rem" class="text-white-50"> Changes user password. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  dpkg  </td>                                                                                                                                                                   
+                <td style="font-size: 0.8rem" class="text-white-50"> Install, remove and configure Debian-based packages. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  apt  </td>                                                                                                                                                                    
+                <td style="font-size: 0.8rem" class="text-white-50"> High-level package management command-line utility. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  aptitude  </td>                                                                                                                                                               
+                <td style="font-size: 0.8rem" class="text-white-50"> Alternative to  apt . </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  snap  </td>                                                                                                                                                                   
+                <td style="font-size: 0.8rem" class="text-white-50"> Install, remove and configure snap packages. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  gem  </td>                                                                                                                                                                    
+                <td style="font-size: 0.8rem" class="text-white-50"> Standard package manager for Ruby. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  pip  </td>                                                                                                                                                                    
+                <td style="font-size: 0.8rem" class="text-white-50"> Standard package manager for Python. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  git  </td>                                                                                                                                                                    
+                <td style="font-size: 0.8rem" class="text-white-50"> Revision control system command-line utility. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  systemctl  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Command-line based service and systemd control manager. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  ps  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Prints a snapshot of the current processes. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  journalctl  </td>                                                                                                                                                             
+                <td style="font-size: 0.8rem" class="text-white-50"> Query the systemd journal. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  kill  </td>                                                                                                                                                                   
+                <td style="font-size: 0.8rem" class="text-white-50"> Sends a signal to a process. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  bg  </td>                                                                                                                                                                     
+                <td style="font-size: 0.8rem" class="text-white-50"> Puts a process into background. </td> 
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  jobs  </td>                                                                                                                                                                   
+                <td style="font-size: 0.8rem" class="text-white-50"> Lists all processes that are running in the background. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  fg  </td>                                                                                                                                                                     
+                <td style="font-size: 0.8rem" class="text-white-50"> Puts a process into the foreground. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  wget  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> An alternative to  curl  that downloads files from FTP or HTTP(s) server. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  python3 -m http.server  </td>                                                                                                                                                 
+                <td style="font-size: 0.8rem" class="text-white-50"> Starts a Python3 web server on TCP port 8000. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  ls  </td>                                                                                                                                                                     
+                <td style="font-size: 0.8rem" class="text-white-50"> Lists directory contents. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  cd  </td>                                                                                                                                                                     
+                <td style="font-size: 0.8rem" class="text-white-50"> Changes the directory. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  clear  </td>                                                                                                                                                                  
+                <td style="font-size: 0.8rem" class="text-white-50"> Clears the terminal. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  touch  </td>                                                                                                                                                                  
+                <td style="font-size: 0.8rem" class="text-white-50"> Creates an empty file. </td> 
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  mkdir  </td>                                                                                                                                                                  
+                <td style="font-size: 0.8rem" class="text-white-50"> Creates a directory. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  tree  </td>                                                                                                                                                                   
+                <td style="font-size: 0.8rem" class="text-white-50"> Lists the contents of a directory recursively. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  mv  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Move or rename files or directories. </td>
+              </tr>
+              <tr> 
+                <td style="font-size: 0.8rem" class="text-info">  cp  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Copy files or directories. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  nano  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Terminal based text editor. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  which  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Returns the path to a file or link. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  find  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Searches for files in a directory hierarchy. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  updatedb  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Updates the locale database for existing contents on the system. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  locate  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Uses the locale database to find contents on the system. </td>
+              </tr>
+              <tr> 
+                <td style="font-size: 0.8rem" class="text-info">  more  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Pager that is used to read STDOUT or files. </td>
+              </tr>
+              <tr> 
+                <td style="font-size: 0.8rem" class="text-info">  less  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> An alternative to  more  with more features. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  head  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Prints the first ten lines of STDOUT or a file. </td>
+              </tr>
+              <tr> 
+                <td style="font-size: 0.8rem" class="text-info">  head  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Prints the first ten lines of STDOUT or a file. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  sort  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Sorts the contents of STDOUT or a file. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  grep  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Searches for specific results that contain given patterns. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  cut  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Removes sections from each line of files. </td>
+              </tr>
+              <tr> 
+                <td style="font-size: 0.8rem" class="text-info">  tr  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Replaces certain characters. </td>              
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  column  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Command-line based utility that formats its input into multiple columns. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  awk  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Pattern scanning and processing language. </td>              
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  sed  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> A stream editor for filtering and transforming text. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  wc  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Prints newline, word, and byte counts for a given input. </td>
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  chmod  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Changes permission of a file or directory. </td>              
+              </tr>
+              <tr>
+                <td style="font-size: 0.8rem" class="text-info">  chown  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Changes the owner and group of a file or directory. </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+</div>
+
+<!--Desktop-->
+<div class="container text-center d-none d-md-block d-lg-block d-xl-block d-xxl-block text-light overflow-auto">
+    <div class="row">
+      <div class="col my-1">
+        <h1 class="text-start">Linux Fundamentals</h1>
+        <h3 id="introductiontolinux" class="text-start mt-5" >Introduction to Linux</h3>
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Command</th>
+              <th scope="col">Description</th>
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">man &lt;tool&gt;</td>
+              <td style="font-size: 0.8rem" class="text-white-50">Opens man pages for the specified tool.</td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">&lt;tool&gt; -h</td>
+              <td style="font-size: 0.8rem" class="text-white-50">Prints the help page of the tool. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">apropos &lt;keyword&gt;</td>
+              <td style="font-size: 0.8rem" class="text-white-50">Searches through man pages' descriptions for instances of a given keyword.</td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">cat</td>
+              <td style="font-size: 0.8rem" class="text-white-50">Concatenate and print files.</td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">whoami</td>
+              <td style="font-size: 0.8rem" class="text-white-50">Displays current username.</td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">id</td>
+              <td style="font-size: 0.8rem" class="text-white-50">Returns users identity.</td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">hostname</td>
+              <td style="font-size: 0.8rem" class="text-white-50">Sets or prints the name of the current host system.</td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">uname</td>
+              <td style="font-size: 0.8rem" class="text-white-50">Prints operating system name.</td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">pwd</td>
+              <td style="font-size: 0.8rem" class="text-white-50">Returns working directory name.</td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">ifconfig</td>
+              <td style="font-size: 0.8rem" class="text-white-50">The `ifconfig` utility is used to assign or view an address to a network interface and/or configure network interface parameters.</td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">ip</td>
+              <td style="font-size: 0.8rem" class="text-white-50">Ip is a utility to show or manipulate routing, network devices, interfaces, and tunnels.</td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  netstat  </td>                                                                                                                                                                
+              <td style="font-size: 0.8rem" class="text-white-50"> Shows network status. </td>   
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  ss  </td>                                                                                                                                                                     
+              <td style="font-size: 0.8rem" class="text-white-50"> Another utility to investigate sockets. </td>   
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  ps  </td>                                                                                                                                                                     
+              <td style="font-size: 0.8rem" class="text-white-50"> Shows process status. </td> 
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  who  </td>                                                                                                                                                                    
+              <td style="font-size: 0.8rem" class="text-white-50"> Displays who is logged in. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  env  </td>                                                                                                                                                                    
+              <td style="font-size: 0.8rem" class="text-white-50"> Prints environment or sets and executes a command. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  lsblk  </td>                                                                                                                                                                  
+              <td style="font-size: 0.8rem" class="text-white-50"> Lists block devices. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  lsusb  </td>                                                                                                                                                                  
+              <td style="font-size: 0.8rem" class="text-white-50"> Lists USB devices. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  lsof  </td>                                                                                                                                                                   
+              <td style="font-size: 0.8rem" class="text-white-50"> Lists opened files. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  lspci  </td>                                                                                                                                                                  
+              <td style="font-size: 0.8rem" class="text-white-50"> Lists PCI devices. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  sudo  </td>                                                                                                                                                                   
+              <td style="font-size: 0.8rem" class="text-white-50"> Execute command as a different user. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  su  </td>
+              <td style="font-size: 0.8rem" class="text-white-50">The `su` utility requests appropriate user credentials via PAM and switches to that user ID (the default user is the superuser).  A shell is then executed./td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  useradd  </td>                                                                                                                                                                
+              <td style="font-size: 0.8rem" class="text-white-50"> Creates a new user or update default new user information. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  userdel  </td>                                                                                                                                                                
+              <td style="font-size: 0.8rem" class="text-white-50"> Deletes a user account and related files. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  usermod  </td>                                                                                                                                                                
+              <td style="font-size: 0.8rem" class="text-white-50"> Modifies a user account. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  addgroup  </td>                                                                                                                                                               
+              <td style="font-size: 0.8rem" class="text-white-50"> Adds a group to the system. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  delgroup  </td>                                                                                                                                                               
+              <td style="font-size: 0.8rem" class="text-white-50"> Removes a group from the system. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  passwd  </td>                                                                                                                                                                 
+              <td style="font-size: 0.8rem" class="text-white-50"> Changes user password. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  dpkg  </td>                                                                                                                                                                   
+              <td style="font-size: 0.8rem" class="text-white-50"> Install, remove and configure Debian-based packages. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  apt  </td>                                                                                                                                                                    
+              <td style="font-size: 0.8rem" class="text-white-50"> High-level package management command-line utility. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  aptitude  </td>                                                                                                                                                               
+              <td style="font-size: 0.8rem" class="text-white-50"> Alternative to  apt . </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  snap  </td>                                                                                                                                                                   
+              <td style="font-size: 0.8rem" class="text-white-50"> Install, remove and configure snap packages. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  gem  </td>                                                                                                                                                                    
+              <td style="font-size: 0.8rem" class="text-white-50"> Standard package manager for Ruby. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  pip  </td>                                                                                                                                                                    
+              <td style="font-size: 0.8rem" class="text-white-50"> Standard package manager for Python. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  git  </td>                                                                                                                                                                    
+              <td style="font-size: 0.8rem" class="text-white-50"> Revision control system command-line utility. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  systemctl  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Command-line based service and systemd control manager. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  ps  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Prints a snapshot of the current processes. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  journalctl  </td>                                                                                                                                                             
+              <td style="font-size: 0.8rem" class="text-white-50"> Query the systemd journal. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  kill  </td>                                                                                                                                                                   
+              <td style="font-size: 0.8rem" class="text-white-50"> Sends a signal to a process. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  bg  </td>                                                                                                                                                                     
+              <td style="font-size: 0.8rem" class="text-white-50"> Puts a process into background. </td> 
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  jobs  </td>                                                                                                                                                                   
+              <td style="font-size: 0.8rem" class="text-white-50"> Lists all processes that are running in the background. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  fg  </td>                                                                                                                                                                     
+              <td style="font-size: 0.8rem" class="text-white-50"> Puts a process into the foreground. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  wget  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> An alternative to  curl  that downloads files from FTP or HTTP(s) server. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  python3 -m http.server  </td>                                                                                                                                                 
+              <td style="font-size: 0.8rem" class="text-white-50"> Starts a Python3 web server on TCP port 8000. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  ls  </td>                                                                                                                                                                     
+              <td style="font-size: 0.8rem" class="text-white-50"> Lists directory contents. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  cd  </td>                                                                                                                                                                     
+              <td style="font-size: 0.8rem" class="text-white-50"> Changes the directory. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  clear  </td>                                                                                                                                                                  
+              <td style="font-size: 0.8rem" class="text-white-50"> Clears the terminal. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  touch  </td>                                                                                                                                                                  
+              <td style="font-size: 0.8rem" class="text-white-50"> Creates an empty file. </td> 
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  mkdir  </td>                                                                                                                                                                  
+              <td style="font-size: 0.8rem" class="text-white-50"> Creates a directory. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  tree  </td>                                                                                                                                                                   
+              <td style="font-size: 0.8rem" class="text-white-50"> Lists the contents of a directory recursively. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  mv  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Move or rename files or directories. </td>
+            </tr>
+            <tr> 
+              <td style="font-size: 0.8rem" class="text-info">  cp  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Copy files or directories. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  nano  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Terminal based text editor. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  which  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Returns the path to a file or link. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  find  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Searches for files in a directory hierarchy. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  updatedb  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Updates the locale database for existing contents on the system. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  locate  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Uses the locale database to find contents on the system. </td>
+            </tr>
+            <tr> 
+              <td style="font-size: 0.8rem" class="text-info">  more  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Pager that is used to read STDOUT or files. </td>
+            </tr>
+            <tr> 
+              <td style="font-size: 0.8rem" class="text-info">  less  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> An alternative to  more  with more features. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  head  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Prints the first ten lines of STDOUT or a file. </td>
+            </tr>
+            <tr> 
+              <td style="font-size: 0.8rem" class="text-info">  head  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Prints the first ten lines of STDOUT or a file. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  sort  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Sorts the contents of STDOUT or a file. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  grep  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Searches for specific results that contain given patterns. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  cut  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Removes sections from each line of files. </td>
+            </tr>
+            <tr> 
+              <td style="font-size: 0.8rem" class="text-info">  tr  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Replaces certain characters. </td>              
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  column  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Command-line based utility that formats its input into multiple columns. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  awk  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Pattern scanning and processing language. </td>              
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  sed  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> A stream editor for filtering and transforming text. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  wc  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Prints newline, word, and byte counts for a given input. </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  chmod  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Changes permission of a file or directory. </td>              
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem" class="text-info">  chown  </td>
+              <td style="font-size: 0.8rem" class="text-white-50"> Changes the owner and group of a file or directory. </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--On this page-->
+	<div class="col-md-auto">
+        <strong class="d-none d-md-block h6 mt-4" align="left">On this page</strong>
+        <hr class="d-none d-md-block my-2 ms-6">
+        <div>
+           <nav>
+             <ul>
+               <li><a class="link-secondary link-underline-opacity-0" href="#introductiontolinux">Introduction to Linux</a></li>
+             </ul>
+           </nav>
+         </div>
+         <!--On this page-->
+    </div>
+</div>
+{% endblock content %}

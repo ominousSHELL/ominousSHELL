@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--Mobile-->
+<div class="container text-center d-sm-block d-md-none d-lg-none d-xxl-none text-light">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-start">Title</h1>
+            <h3 class="text-start mt-5" >Subtopic #1</h3>
+            <table class="table table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Command</th>
+                  <th scope="col">Description</th>
+                
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-size: 0.8rem" class="text-info">man &lt;tool&gt;</td>
+                  <td style="font-size: 0.8rem" class="text-white-50">Opens man pages for the specified tool.</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="text-start mt-5" >Subtopic #2</h3>
+            <table class="table table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Command</th>
+                  <th scope="col">Description</th>
+                
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-size: 0.8rem" class="text-info">man &lt;tool&gt;</td>
+                  <td style="font-size: 0.8rem" class="text-white-50">Opens man pages for the specified tool.</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--Desktop-->
+<div class="container text-center d-none d-md-block d-lg-block d-xl-block d-xxl-block text-light overflow-auto">
+    <div class="row">
+      <div class="col my-1">
+        <h1 class="text-start">Title</h1>
+        <h3 id="introductiontowindows" class="text-start mt-5" >Introduction to Windows</h3>
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Command</th>
+              <th scope="col">Description</th>
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  xfreerdp /v:&lt;target IP address&gt; /u:htb-student /p:&lt;password&gt;  </td>                                                                                                           
+                <td style="font-size: 0.8rem" class="text-white-50"> RDP to lab target </td> 
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info"> Get-WmiObject -Class win32_OperatingSystem  </td>                                                                                                                             
+                <td style="font-size: 0.8rem" class="text-white-50">Get information about the operating system </td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">dir c:\ /a</td>                                                                                                                             
+                <td style="font-size: 0.8rem" class="text-white-50">View all files and directories in the c:\ root directory</td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  tree &lt;directory&gt;  </td>                                                                                                                                                       
+                <td style="font-size: 0.8rem" class="text-white-50"> Graphically displaying the directory structure of a path </td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">tree c:\ /f | more</td>                                                                                                                                                       
+                <td style="font-size: 0.8rem" class="text-white-50">Walk through results of the tree command page by page</td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  icacls &lt;directory&gt;  </td>                                                                                                                                                     
+                <td style="font-size: 0.8rem" class="text-white-50"> View the permissions set on a directory </td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info"> icacls c:\users /grant joe:f </td>                                                                                                                                                     
+                <td style="font-size: 0.8rem" class="text-white-50"> Grant a user full permissions to a directory </td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info"> icacls c:\users /remove joe </td>                                                                                                                                                     
+                <td style="font-size: 0.8rem" class="text-white-50"> Remove a users' permissions on a directory </td>  
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  Get-Service  </td>
+                <td style="font-size: 0.8rem" class="text-white-50">  PowerShell  cmdlet to view running services </td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  help &lt;command&gt;  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Display the help menu for a specific command </td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  get-alias  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> List  PowerShell  aliases </td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  New-Alias -Name "Show-Files" Get-ChildItem  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Create a new  PowerShell  alias </td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  Get-Module | select Name,ExportedCommands | fl </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> View imported PowerShell modules and their associated commands</td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  Get-ExecutionPolicy -List  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> View the  PowerShell  execution policy </td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  Set-ExecutionPolicy Bypass -Scope Process  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Set the  PowerShell  execution policy to bypass for the current session </td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  wmic os list brief  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Get information about the operating system with  wmic  </td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  Invoke-WmiMethod  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Call methods of  WMI  objects </td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  whoami /user  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> View the current users' SID </td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  reg query <key>  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> View information about a registry key </td>                    
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  Get-MpComputerStatus  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Check which  Defender  protection settings are enabled </td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.8rem" class="text-info">  sconfig  </td>
+                <td style="font-size: 0.8rem" class="text-white-50"> Load Server Configuration menu in Windows Server Core </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--On this page-->
+	<div class="col-md-auto">
+        <strong class="d-none d-md-block h6 mt-4" align="left">On this page</strong>
+        <hr class="d-none d-md-block my-2 ms-6">
+        <div>
+           <nav>
+             <ul>
+               <li><a class="link-secondary link-underline-opacity-0" href="#introductiontowindows">Introduction to Windows</a></li>
+             </ul>
+           </nav>
+         </div>
+         <!--On this page-->
+    </div>
+</div>
+{% endblock content %}
