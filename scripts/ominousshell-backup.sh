@@ -2,7 +2,7 @@
 
 BACKUP_DIR=/media/backup/
 
-echo "Backing up 'ominousSHELL' to SSD..."
+echo "Backing up 'ominousSHELL' to USB..."
 sudo cp -r ~/ominousSHELL $BACKUP_DIR
 
 echo "Backing up 'ominousSHELL' to Github..."
