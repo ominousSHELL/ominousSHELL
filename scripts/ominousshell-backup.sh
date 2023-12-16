@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-BACKUP_DIR=/media/backup/
+BACKUP_DIR=/media/backup/Kali-Linux
 
 echo "Backing up 'ominousSHELL' to USB..."
 sudo cp -r ~/ominousSHELL $BACKUP_DIR
