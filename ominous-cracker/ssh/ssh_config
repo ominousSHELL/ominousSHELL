@@ -1,0 +1,4 @@
+Host ominous-craker
+    HostName <host-ip-address>
+    Port 2222
+    IdentityFile /home/ominousshell/ominousSHELL/ominous-cracker/ssh/ominous-cracker

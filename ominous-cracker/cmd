@@ -1,0 +1,2 @@
+docker run -it --cpus=4 --memory=2048m --device=/dev/dri/card0:/dev/dri/card0 your_image_name
+

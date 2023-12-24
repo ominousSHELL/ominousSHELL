@@ -1,4 +1,6 @@
 #!/bin/zsh
 
-sudo docker stop ominousshell-db && sudo docker stop ominousshell-django
+cd ~/ominousSHELL/bookstack
+sudo docker-compose stop
+sudo mv ~/ominousSHELL/bookstack/bookstack* /media/backup/Kali-Linux/bookstack
 
