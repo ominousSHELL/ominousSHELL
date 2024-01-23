@@ -2,8 +2,7 @@
 
 
 echo "Backing up '/config' directory of 'ominousshell-bookstack' and 'ominousshell-boostack_db' to USB..."
-sudo cp -r ~/ominousSHELL/bookstack/{bookstack_app_data,bookstack_db_data} /media/backup/Kali-Linux/bookstack/backup/
-sudo cp -r ~/ominousSHELL/bookstack/{bookstack_app_data,bookstack_db_data} /media/backup/Kali-Linux/bookstack/
+sudo cp -r /media/backup/Kali-Linux/bookstack/{bookstack_app_data,bookstack_db_data} /media/backup/Kali-Linux/bookstack/backup/
 
 echo "Backing up 'ominousshell' database to USB..."
 sudo docker exec -it ominousshell-bookstack_db mysqldump -u bookstack -pominousshell ominousshell > /dev/shm/ominousshell.sql

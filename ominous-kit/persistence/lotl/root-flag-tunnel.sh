@@ -16,7 +16,7 @@ if [[ $uid != "root" ]]; then
 fi
 
 function root-flag-tunnel(){
-	bash -c "printf \"$red ROOT FLAG : $id : $uid : $ip : $root \n\" > /dev/tcp/127.0.0.1/9999" 2>/dev/null
+	bash -c "printf \"$red ROOT FLAG : $id : $uid : $ip : $flag \n\" > /dev/tcp/127.0.0.1/9999" 2>/dev/null
 }
 
 type -fp watch 1>/dev/null
@@ -25,7 +25,7 @@ if [[ $? == 0 ]]; then
 	while true; do
 		nohup watch -gn 1 'cat /root/flag.txt' 1>/dev/null 2>/dev/null
 		if [[ $? == 0 ]]; then
-			root=$(cat /root/flag.txt)
+			flag=$(cat /root/flag.txt)
 			root-flag-tunnel
 			id=$((id + 1))
 		fi
@@ -33,7 +33,7 @@ if [[ $? == 0 ]]; then
 
 else
 	for id in {1..1000}; do
-		root=$(cat /root/flag.txt 2>/dev/null)
+		flag=$(cat /root/flag.txt 2>/dev/null)
 		root-flag-tunnel
 		sleep 5
 	done&disown
