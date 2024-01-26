@@ -1,13 +1,11 @@
 #!/bin/zsh
 
+echo "Compressing '.env', 'public/uploads/', 'storage/uploads', '/themes'..."
+sudo docker exec -it ominousshell-bookstack tar -C /var/www/bookstack -czvf /bookstack-backup.tar.gz .env public/uploads storage/uploads themes 1>/dev/null
 
-echo "Backing up '/config' directory of 'ominousshell-bookstack' and 'ominousshell-boostack_db' to USB..."
-sudo cp -r /media/backup/Kali-Linux/bookstack/{bookstack_app_data,bookstack_db_data} /media/backup/Kali-Linux/bookstack/backup/
+echo "Backing up 'bookstack-backup.tar.gz' to USB..."
+sudo docker cp ominousshell-bookstack:/bookstack-backup.tar.gz /media/backup/Kali-Linux/bookstack/backup/
 
 echo "Backing up 'ominousshell' database to USB..."
-sudo docker exec -it ominousshell-bookstack_db mysqldump -u bookstack -pominousshell ominousshell > /dev/shm/ominousshell.sql
+sudo docker exec -it ominousshell-bookstack mysqldump -u bookstack -pominousshell ominousshell > /dev/shm/ominousshell.sql
 sudo mv /dev/shm/ominousshell.sql /media/backup/Kali-Linux/bookstack/backup/
-
-echo "Backing up '/app' data directory to USB..."
-sudo rm -rf /media/backup/Kali-Linux/bookstack/backup/app
-sudo docker cp ominousshell-bookstack:/app /media/backup/Kali-Linux/bookstack/backup/

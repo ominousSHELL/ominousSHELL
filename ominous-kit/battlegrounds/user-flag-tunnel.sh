@@ -5,6 +5,7 @@
 blue="\033[01;34m"
 green="\033[01;32m"
 red="\033[01;31m"
+reset="\033[0m"
 
 #Initialize variables
 ip=$(ip addr | grep lo$ | awk '{print $2}' | cut -d / -f 1)
@@ -14,7 +15,7 @@ function user-flag-tunnel(){
 	bash -c "printf \"$green USER FLAG : $id : $uid : $ip : $flag \n\" > /dev/tcp/127.0.0.1/9999" 2>/dev/null
 }
 
-type -fp watch 1>/dev/null
+which watch 1>/dev/null
 if [[ $? == 0 ]]; then
 	id=0
 	while true; do

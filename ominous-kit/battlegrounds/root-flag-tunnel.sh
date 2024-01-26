@@ -19,7 +19,7 @@ function root-flag-tunnel(){
 	bash -c "printf \"$red ROOT FLAG : $id : $uid : $ip : $flag \n\" > /dev/tcp/127.0.0.1/9999" 2>/dev/null
 }
 
-type -fp watch 1>/dev/null
+which watch 1>/dev/null
 if [[ $? == 0 ]]; then
 	id=0
 	while true; do
