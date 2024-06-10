@@ -1,9 +1,0 @@
----
-version: "2"
-services:
-  bookstack:
-    image: ominousshell-bookstack
-    container_name: ominousshell-bookstack
-    ports:
-      - 2000:2000
-    restart: unless-stopped
