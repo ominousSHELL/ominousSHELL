@@ -1,9 +1,9 @@
 #!/bin/zsh
 
-BACKUP_DIR=/media/backup/Kali-Linux
+BACKUP_DIR="/home/ominousshell/es/Kali-Linux/"
 
 echo "Removing old 'ominousSHELL' from USB..."
-sudo rm -rf $BACKUP_DIR/ominousSHELL/
+sudo rm -rf "$BACKUP_DIR/ominousSHELL/"
 
 echo "Backing up 'ominousSHELL' to USB..."
 sudo cp -r ~/ominousSHELL $BACKUP_DIR
