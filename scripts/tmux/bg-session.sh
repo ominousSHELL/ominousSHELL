@@ -1,4 +1,5 @@
 #!/bin/zsh
+tmux kill-session
 #Initialize directories
 temp_dir=$(mktemp -d)
 temp_name=$(echo $temp_dir |grep -o 'tmp.*'| awk -F / '{print $2}')
@@ -7,40 +8,40 @@ mkdir -p $temp_dir/defense
 mkdir -p $temp_dir/recon
 mkdir -p $temp_dir/scanning
 mkdir -p $temp_dir/exploit
-mv $temp_dir '/home/ominousshell/es/ctf/htb/bg/'
+sudo mv $temp_dir '/home/ominousshell/es/HTB/bg/'
 
 #WINDOW DEFINITION
-tmux new-session -En 'SERVERS' -c /home/ominousshell/es/ctf/htb/bg/$temp_name/www -d 
-tmux new-window -n 'DEFENSE[1]' -c /home/ominousshell/es/ctf/htb/bg/$temp_name/defense
-tmux new-window -n 'DEFENSE[2]' -c /home/ominousshell/es/ctf/htb/bg/$temp_name/defense
-tmux new-window -n 'MSF' -c /home/ominousshell/es/ctf/htb/bg/$temp_name/exploit
-tmux new-window -n 'RECON' -c /home/ominousshell/es/ctf/htb/bg/$temp_name/recon/
-tmux new-window -n 'SCANNING[1]' -c /home/ominousshell/es/ctf/htb/bg/$temp_name/scanning/
-tmux new-window -n 'SCANNING[2]' -c /home/ominousshell/es/ctf/htb/bg/$temp_name/scanning/
-tmux new-window -n 'EXPLOIT[1]' -c /home/ominousshell/es/ctf/htb/bg/$temp_name/exploit/
-tmux new-window -n 'EXPLOIT[2]' -c /home/ominousshell/es/ctf/htb/bg/$temp_name/exploit/
+tmux new-session -n 'SERVERS' -c /home/ominousshell/es/HTB/bg/$temp_name/www -d 
+tmux new-window -n 'DEFENSE[1]' -c /home/ominousshell/es/HTB/bg/$temp_name/defense
+tmux new-window -n 'DEFENSE[2]' -c /home/ominousshell/es/HTB/bg/$temp_name/defense
+tmux new-window -n 'MSF' -c /home/ominousshell/es/HTB/bg/$temp_name/exploit
+tmux new-window -n 'RECON' -c /home/ominousshell/es/HTB/bg/$temp_name/recon/
+tmux new-window -n 'SCANNING[1]' -c /home/ominousshell/es/HTB/bg/$temp_name/scanning/
+tmux new-window -n 'SCANNING[2]' -c /home/ominousshell/es/HTB/bg/$temp_name/scanning/
+tmux new-window -n 'EXPLOIT[1]' -c /home/ominousshell/es/HTB/bg/$temp_name/exploit/
+tmux new-window -n 'EXPLOIT[2]' -c /home/ominousshell/es/HTB/bg/$temp_name/exploit/
 
 #PANES
 #SERVER
-cd /home/ominousshell/es/ctf/htb/bg/$temp_name/www
+cd /home/ominousshell/es/HTB/bg/$temp_name/www
 tmux select-window -t 0
 tmux split-window -h
 tmux split-window -v
 tmux select-pane -t 0
 tmux split-window -v
 #DEFENSE
-cd /home/ominousshell/es/ctf/htb/bg/$temp_name/defense
+cd /home/ominousshell/es/HTB/bg/$temp_name/defense
 #MSF
 #RECON
-cd /home/ominousshell/es/ctf/htb/bg/$temp_name/recon
+cd /home/ominousshell/es/HTB/bg/$temp_name/recon
 tmux select-window -t 4
 tmux split-window -v
 #SCANNING
-cd /home/ominousshell/es/ctf/htb/bg/$temp_name/scanning
+cd /home/ominousshell/es/HTB/bg/$temp_name/scanning
 tmux select-window -t 5
 tmux split-window -vb 
 #EXPLOIT
-cd /home/ominousshell/es/ctf/htb/bg/$temp_name/exploit
+cd /home/ominousshell/es/HTB/bg/$temp_name/exploit
 
 sleep 3
 
