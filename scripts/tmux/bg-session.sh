@@ -1,5 +1,4 @@
 #!/bin/zsh
-tmux kill-session
 #Initialize directories
 temp_dir=$(mktemp -d)
 temp_name=$(echo $temp_dir |grep -o 'tmp.*'| awk -F / '{print $2}')
@@ -9,6 +8,8 @@ mkdir -p $temp_dir/recon
 mkdir -p $temp_dir/scanning
 mkdir -p $temp_dir/exploit
 sudo mv $temp_dir '/home/ominousshell/es/HTB/bg/'
+
+cp ~/ominousSHELL/scripts/bg/start.sh "/home/ominousshell/es/HTB/bg/$temp_name/recon/"
 
 #WINDOW DEFINITION
 tmux new-session -n 'SERVERS' -c /home/ominousshell/es/HTB/bg/$temp_name/www -d 

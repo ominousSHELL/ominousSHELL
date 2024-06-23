@@ -1,15 +1,14 @@
 #!/bin/bash
 
 #Variables
-webroot=$2
-path="$1.ssh/authorized_keys"
+webroot=$1
 blue="\033[01;34m"
 green="\033[01;32m"
 red="\033[01;31m"
 
 #Usage
 if [[ $1 == '' ]];then
-	echo 'Usage:./backdoor.sh'
+	echo 'Usage:./backdoor.sh [web directory]'
 	exit
 fi
 

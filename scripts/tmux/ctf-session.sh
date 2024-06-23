@@ -1,7 +1,7 @@
 #!/bin/zsh
 #Initialize directories
 mkdir {recon,scanning,exploit,www} 2>/dev/null
-cp ~/ominousSHELL/bg/start.sh "$(pwd)/recon/"
+cp ~/ominousSHELL/scripts/bg/start.sh "$(pwd)/recon/"
 
 #WINDOW DEFINTION
 tmux new-session -n SERVERS -c "$(pwd)/www/" -d
@@ -30,5 +30,6 @@ tmux split-window -v -c "$(pwd)/scanning/"
 #EXPLOIT
 
 tmux select-window -t 2
+tmux select-pane -t 0
 tmux attach-session
 
