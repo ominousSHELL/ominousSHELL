@@ -1,0 +1,32 @@
+version: "3"
+services:
+  mysql:
+    container_name: ominous-gen-mysql
+    build:
+      context: ./mysql
+      dockerfile: Dockerfile.mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ominous-gen
+      MYSQL_DATABASE: ominous_gen
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./mysql/init:/data
+      - ./mysql/init/init.sh:/docker-entrypoint-initdb.d/init.sh
+
+
+  nextjs:
+    container_name: ominous-gen-nextjs
+    build:
+      context: ./nextjs
+      dockerfile: Dockerfile.nextjs
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql
+    volumes:
+      - ./nextjs:/app
+
+volumes:
+  mysql-data:

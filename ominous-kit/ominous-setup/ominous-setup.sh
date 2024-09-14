@@ -13,32 +13,45 @@ reset="\033[0m"
 function abort_msg(){
 	printf "$red[-] Aborting...\n"
 }
+
+#Check if cURL is installed
+which curl >/dev/null 2>&1
+if [[ $? == 0 ]];then
+	curl_installed=true
+else
+	curl_installed=false
+fi
+#Check if wget is installed
+which wget >/dev/null 2>&1
+if [[ $? == 0 ]];then
+	wget_installed=true
+else
+	wget_installed=false
+fi
+
+
 function setup_zsh(){
 	which zsh >/dev/null 2>&1
 	if [[ $? == 0 ]]; then
-		which curl >/dev/null 2>&1
-		if [[ $? == 0 ]]; then
-			curl -sS http://127.0.0.1/ominous-setup/zsh/.zshrc > /tmp/zsh-config.sh
+		if [[ curl_installed ]];then
+			RESPONSE=$(curl -sS http://127.0.0.1:8000/ominous-kit/ominous-setup/zsh/.zshrc -o /tmp/zsh-config.sh 2>/dev/null 2>&1)
 			if [[ $? == 0 ]]; then
 				printf "$green[+] Done!\n$reset"
 				printf "$green[+] Run 'source /tmp/zsh-config.sh'!\n$reset"
 			else
-				printf "$red[+] Error occured!\n$reset"
+				printf "$red[+] Error: $RESPONSE\n$reset"
+			fi
+		elif [[ wget_installed ]];then
+			RESPONSE=$(wget  http://127.0.0.1:8000/ominous-kit/ominous-setup/zsh/.zshrc -O /tmp/zsh-config.sh 2>/dev/null 2>&1)
+			if [[ $? == 0 ]]; then
+				printf "$green[+] Done!\n$reset"
+				printf "$green[+] Run 'source /tmp/zsh-config.sh'!\n$reset"
+			else
+				printf "$red[+] Error: $RESPONSE\n$reset"
 			fi
 		else
-			which wget >/dev/null 2>&1
-			if [[ $? == 0 ]]; then
-				wget -q0- http://127.0.0.1/ominous-setup/zsh/.zshrc > /tmp/zsh-config.sh 
-				if [[ $? == 0 ]]; then
-					printf "$green[+] Done!\n$reset"
-					printf "$green[+] Run 'source /tmp/zsh-config.sh'!\n$reset"
-				else
-					printf "$red[+] Error occured!\n$reset"
-				fi
-			else
-				printf "$red[-] cURL or wget is not installed!\n$reset"
-				abort_msg
-			fi	
+			printf "$red[-] cURL or wget is not installed!\n$reset"
+			abort_msg
 		fi
 
 	else
@@ -50,28 +63,24 @@ function setup_zsh(){
 function setup_vim(){
 	which vim >/dev/null 2>&1
 	if [[ $? == 0 ]]; then
-		which curl >/dev/null 2>&1
-		if [[ $? == 0 ]]; then
-			curl -sS http://127.0.0.1/ominous-setup/vim/.vimrc > /tmp/vimrc
+		if [[ curl_installed ]];then
+			RESPONSE=$(curl -sS http://127.0.0.1:8000/ominous-kit/ominous-setup/vim/.vimrc -o ~/.vimrc 2>/dev/null 2>&1)
 			if [[ $? == 0 ]]; then
 				printf "$green[+] Done!\n$reset"
 			else
-				printf "$red[+] Error occured!\n$reset"
+				printf "$red[+] Error: $RESPONSE\n$reset"
+			fi
+		elif [[ wget_installed ]];then
+			RESPONSE=$(wget  http://127.0.0.1:8000/ominous-kit/ominous-setup/vim/.vimrc -O ~/.vimrc 2>/dev/null 2>&1)
+			if [[ $? == 0 ]]; then
+				printf "$green[+] Done!\n$reset"
+			else
+				printf "$red[+] Error: $RESPONSE\n$reset"
 			fi
 		else
-			which wget >/dev/null 2>&1
-			if [[ $? == 0 ]]; then
-				wget -q0- http://127.0.0.1/ominous-setup/vim/.vimrc > /tmp/vimrc
-				if [[ $? == 0 ]]; then
-					printf "$green[+] Done!\n$reset"
-				else
-					printf "$red[+] Error occured!\n$reset"
-				fi
-			else
-				printf "$red[-] cURL or wget is not installed!\n$reset"
-				abort_msg
-			fi	
-		fi
+			printf "$red[-] cURL or wget is not installed!\n$reset"
+			abort_msg
+		fi	
 	else
 		printf "$red[-] vim is not installed\n$reset"
 		abort_msg
@@ -80,10 +89,10 @@ function setup_vim(){
 
 
 
-echo "[1/2] Attempting to setup zsh environment..."
+printf "$blue[1/2] Attempting to setup zsh environment...\n$reset"
 setup_zsh
 
-echo "[2/2] Attempting to setup vim environment..."
+printf "$blue[2/2] Attempting to setup vim environment...\n$reset"
 setup_vim
 
 

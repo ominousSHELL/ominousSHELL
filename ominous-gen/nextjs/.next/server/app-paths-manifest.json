@@ -1,0 +1,8 @@
+{
+  "/page": "app/page.js",
+  "/api/categories/route": "app/api/categories/route.js",
+  "/api/payloads/route": "app/api/payloads/route.js",
+  "/api/payload_classes/route": "app/api/payload_classes/route.js",
+  "/api/payload_language/route": "app/api/payload_language/route.js",
+  "/api/payload_data/route": "app/api/payload_data/route.js"
+}

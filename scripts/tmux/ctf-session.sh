@@ -1,7 +1,18 @@
 #!/bin/zsh
 #Initialize directories
+
+echo "Connecting to Hacking Platform's Network..."
+sed -i "s/eth0/tun0/g" /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/prompt.sh
+DIRECTORY=$(pwd)
+if [[ $DIRECTORY == *"HTB"* ]]; then
+	FILE=$(find "/home/ominousshell/es/HTB/" -maxdepth 1 -name '*.ovpn' -print -quit) && sudo openvpn $FILE >/dev/null 2>&1 &
+elif [[ $DIRECTORY == *"THM"* ]]; then
+	FILE=$(find "/home/ominousshell/es/THM/" -maxdepth 1 -name '*.ovpn' -print -quit) && sudo openvpn $FILE >/dev/null 2>&1 &
+fi
+
+sleep 3
 mkdir {recon,scanning,exploit,www} 2>/dev/null
-cp ~/ominousSHELL/scripts/bg/start.sh "$(pwd)/recon/"
+cp ~/es/Kali\ Linux/ominousSHELL/scripts/bg/start.sh "$(pwd)/recon/"
 
 #WINDOW DEFINTION
 tmux new-session -n SERVERS -c "$(pwd)/www/" -d
